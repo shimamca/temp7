@@ -48,37 +48,30 @@
 <section id="main" class="margin-top-30">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12 col-md-12">
-                <div class="content">
-                    <!-- posts -->
-					
-                    <div class="posts">
-
+            <div class="col-sm-12 col-md-8">
+              
+						
                         <!-- printf posts -->
                         <?php
-                        foreach ($posts as $item) {
-                            //$this->load->view('partials/_post_item',['item' => $item]);
-                        }
-						 $this->load->view('partials/_categories_post');
-                        ?>
+                        //foreach ($posts as $item) {
+                           // $this->load->view('partials/_post_item',['item' => $item]);
+                        //}
 						
-                    </div><!-- /.posts -->
-
-
-                    <!-- <div class="col-sm-12">
-                        <div class="row">-->
-                            <?php //echo $this->pagination->create_links(); ?>
-                       <!--  </div>
-                    </div>-->
-                </div>
-
+						 $this->load->view('partials/_categories_events');
+						 $this->load->view('partials/_categories_articles');
+						 $this->load->view('partials/_categories_poems');
+						 
+                        ?>
+						                  
+               
+			
             </div>
 
-            <!--<div class="col-sm-12 col-md-4">
+            <div class="col-sm-12 col-md-4">
                 <!--Sidebar-->
-                <?php //$this->load->view('partials/_sidebar'); ?>
+                <?php $this->load->view('partials/_sidebar'); ?>
 
-            <!--</div><!--/col-->
+            </div><!--<!--/col-->
 
         </div>
     </div>

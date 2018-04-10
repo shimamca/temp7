@@ -377,4 +377,27 @@ if (!function_exists('helper_get_category_posts')) {
         return $ci->post_model->get_category_posts($category_id);
     }
 }
+//get category posts Poem
+if (!function_exists('helper_get_category_posts_poem')) {
+    function helper_get_category_posts_poem()
+    {
+        // Get a reference to the controller object
+        $ci =& get_instance();
+        $ci->load->model('post_model');
+        return $ci->post_model->get_category_posts_poem();
+    }
+}
+
+//get category posts Poem
+if (!function_exists('helper_get_category_poems')) {
+    function helper_get_category_poems()
+    {
+        // Get a reference to the controller object
+        $ci =& get_instance();
+        $ci->load->model('post_model');
+        return $ci->post_model->get_category_poems();
+    }
+}
+
+
 ?>

@@ -4,7 +4,6 @@
 <html lang="en-US">
 <head>
     <meta charset="utf-8">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php echo $title; ?> - <?php echo html_escape($settings->site_title); ?></title>
@@ -195,7 +194,7 @@
                         <?php if ($page->page_active == 1): ?>
 
                             <!--If count smaller than 6-->
-                            <?php if ($page_count < 6) : ?>
+                            <?php if ($page_count < 10) : ?>
 
 
                                 <!--If not custom-->
@@ -218,7 +217,7 @@
                                     <!--If custom page-->
                                     <li class="<?php echo ($active == $page->slug) ? 'active' : ''; ?>">
                                         <a href="<?php echo base_url() . html_escape($page->slug); ?>">
-                                            <?php echo html_escape($page->title); ?>
+                                            <?php echo html_escape($page->title_hindi); ?>
                                         </a>
                                     </li>
                                 <?php endif; ?><!--If page custom-->
@@ -232,7 +231,7 @@
 
 
                     <!--Show More Pages-->
-                    <?php if ($page_count > 6) : ?>
+                    <?php if ($page_count > 10) : ?>
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                 <?php echo html_escape($this->lang->line("more")); ?>
@@ -263,7 +262,7 @@
                                                 <!--If custom page-->
                                                 <li>
                                                     <a href="<?php echo base_url() . html_escape($page->slug); ?>">
-                                                        <?php echo html_escape($page->title); ?>
+                                                        <?php echo html_escape($page->title_hindi); ?>
                                                     </a>
                                                 </li>
                                             <?php endif; ?><!--If page custom-->
@@ -339,21 +338,16 @@
                         </li>
 
                     <?php else : ?>
-                        <li class="<?php echo ($active == 'login') ? 'active' : ''; ?>">
-                            <a href="<?php echo base_url(); ?>login">
-                                <?php echo html_escape($this->lang->line("nav_login")); ?>
-                            </a>
-                        </li>
-                        <li class="<?php echo ($active == 'register') ? 'active' : ''; ?>">
-                            <a href="<?php echo base_url(); ?>register">
-                                <?php echo html_escape($this->lang->line("nav_register")); ?>
-                            </a>
-                        </li>
+                        
+                       
                     <?php endif; ?>
-
-                    <li>
-                        <a href="#" data-toggle="modal-search" class="search-icon"><i class="fa fa-search"></i></a>
+					 <?php if (!is_admin()): ?>
+                    
+					<li>
+                        <p><div style="text-align:center;"><script type="text/javascript" src="http://services.webestools.com/cpt_visitors/54274-6-5.js"></script></div><a href="http://www.webestools.com/" style="display:block;text-align:center;" title="Tools services webmasters counters generators scripts tutorials free"></a></p>
                     </li>
+					
+					 <?php endif; ?>
                 </ul>
 
             </div>
@@ -361,18 +355,7 @@
     </nav><!--/nav-->
 
 
-    <!--search modal-->
-    <div class="modal-search">
-        <?php echo form_open('search', ['method' => 'get']); ?>
-        <div class="container">
-            <input type="text" name="q" class="form-control" maxlength="300" pattern=".*\S+.*"
-                   placeholder="<?php echo html_escape($this->lang->line("placeholder_search")); ?>" required>
-            <i class="fa fa-times close"></i>
-        </div>
-        <?php echo form_close(); ?>
-    </div><!-- /.modal-search -->
-
-
+   
 </header>
 <!-- /.header-->
 

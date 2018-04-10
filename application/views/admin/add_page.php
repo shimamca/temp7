@@ -18,7 +18,11 @@
                     <input type="text" class="form-control" name="title"
                            placeholder="Page Title" value="<?php echo old('title'); ?>">
                 </div>
-
+				<div class="form-group">
+                    <label>Page Hindi Title</label>
+                     <input type="text" class="form-control" name="title_hindi" placeholder="Page Hindi Title"
+                               value="" >
+                </div>
                 <div class="form-group">
                     <input type="text" class="form-control" name="page_description"
                            placeholder="Page Description (Meta Tag)" value="<?php echo old('page_description'); ?>">

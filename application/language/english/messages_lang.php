@@ -19,6 +19,11 @@ $lang["nav_reading_list"] = "Reading List";
 $lang["nav_change_password"] = "Change Password";
 $lang["nav_update_profile"] = "Update Profile";
 
+$lang["index_title_event"] = "कार्यक्रम";
+$lang["index_title_article"] = "आलेख";
+$lang["index_title_poem"] = "कविता";
+
+
 $lang["breadcrumb_home"] = "होम";
 $lang["breadcrumb_about"] = "About";
 $lang["breadcrumb_gallery"] = "Gallery";
@@ -54,10 +59,10 @@ $lang["btn_delete"] = "Delete";
 $lang["btn_add_reading_list"] = "Add to Reading List";
 $lang["btn_delete_reading_list"] = "Remove from Reading List";
 
-$lang["title_popular_posts"] = "Popular Posts";
-$lang["title_categories"] = "Categories";
-$lang["title_random_posts"] = "Random Posts";
-$lang["title_tags"] = "Tags";
+$lang["title_popular_posts"] = "हाल का  पोस्ट";
+$lang["title_categories"] = "वर्ग";
+$lang["title_random_posts"] = "लोकप्रिय पोस्ट ";
+$lang["title_tags"] = "टैग";
 $lang["title_related_posts"] = "Related Posts";
 $lang["title_comments"] = "Comments";
 $lang["title_leave_reply"] = "Leave a Reply";
@@ -69,7 +74,7 @@ $lang["search_noresult"] = "No results found.";
 
 $lang["footer_about"] = "About";
 $lang["footer_random_posts"] = "Random Posts";
-$lang["footer_follow"] = "Social Media";
+$lang["footer_follow"] = "सोशल मीडिया";
 $lang["footer_newsletter"] = "Subscribe here to get interesting stuff and updates!";
 $lang["footer_copyright"] = "Copyright © 2017 Infinite - All Rights Reserved.";
 

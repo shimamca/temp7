@@ -5,6 +5,7 @@ body{
     font-weight:400;
     line-height:21px;
 	
+	
 }
 a{
     -moz-transition:.2s;
@@ -149,7 +150,8 @@ section{
 }
 #header{
     border-top:1px solid #e4e4e4;
-    box-shadow:0 1px 5px #dcdddd
+    box-shadow:0 1px 5px #dcdddd;
+	
 }
 .navbar{
     border-radius:0;
@@ -172,7 +174,7 @@ section{
     display:inline-block;
     text-transform:uppercase;
     font-weight:600;
-    color:#5e5e5e;
+    color:#000;
     background-color:transparent!important;
     font-size:13px
 }
@@ -186,7 +188,10 @@ section{
 }
 .navbar-inverse{
     border:0;
-    background-color:#fff
+    background-color:#fff;
+	background-image: url("http://localhost/temp7/assets/img/bg.jpg");
+    background-repeat:  repeat-x;
+	
 }
 .navbar-inverse .navbar-brand{
     font-size:36px;
@@ -613,7 +618,7 @@ section{
     margin-left:25px;
     margin-right:5px
 }
-.sidebar{
+.sidebar,{
     height:auto;
     width:100%
 }
@@ -621,9 +626,9 @@ section{
     width:100%;
     height:auto;
     float:left;
-    margin-bottom:30px
+    margin-bottom:30px; 
 }
-.sidebar-widget .widget-body{
+.sidebar-widget .widget-body, .widget-body{
     padding-top:15px
 }
 .widget-title{
@@ -633,7 +638,7 @@ section{
     border-bottom:2px solid transparent
 }
 .widget-title .title{
-    font-size:14px;
+    font-size:20px;
     font-weight:500;
     margin:0;
     text-transform:uppercase
@@ -652,7 +657,8 @@ section{
     width:100%;
     display:block;
     float:left;
-    margin-bottom:15px
+    margin-bottom:15px;
+	background-color:#f4f4f4; border:1px solid #EEE;
 }
 .w-popular-list li img{
     width:100px;
@@ -664,10 +670,68 @@ section{
 .w-popular-list li .title{
     margin:0;
     margin-bottom:5px;
-    font-weight:400;
+    font-weight:700;
     line-height:22px;
     font-size:14px
 }
+/*----------KAVITA------------------*/
+.w-poem-list li{
+    list-style:none;
+    position:relative;
+    width:50%;
+    display:block;
+    float:left;
+    margin-bottom:15px;
+	
+}
+.w-poem-list li img{
+    width:100px;
+    height:75px;
+    float:left;
+    margin-right:15px;
+    position:relative
+}
+.w-poem-list li .title{
+    margin:0;
+    margin-bottom:5px;
+    font-weight:700;
+    line-height:22px;
+    font-size:16px
+}
+
+.w-poem-list li .title a{
+    display:list-item;
+}
+/*----------EVENTS------------------*/
+.w-events-list li{
+    list-style:none;
+    position:relative;
+    width:100%;
+    display:block;
+    float:left;
+    margin-bottom:15px
+}
+.w-events-list li img{
+    width:200px;
+    height:150px;
+    float:left;
+    margin-right:15px;
+    position:relative
+}
+.w-events-list li .title{
+    margin:0;
+    margin-bottom:5px;
+    font-weight:700;
+    line-height:22px;
+    font-size:16px
+}
+
+.w-events-list li .title a{
+    display:list-item
+}
+/*************/
+
+
 .w-popular-list li .title a{
     display:list-item
 }
@@ -702,7 +766,7 @@ section{
     font-size:13px
 }
 .random-post-slider{
-    position:relative
+    position:relative; 
 }
 .random-post-slider .owl-item .img-gradient{
     background:rgba(0,0,0,0) url("../img/slide-gr.png") repeat-x scroll 0 -1px / 200px 100%;
@@ -1302,11 +1366,13 @@ section{
     max-width:100%!important
 }
 .page-title{
-    font-size:18px;
+    font-size:20px;
     margin-top:0;
     margin-bottom:30px;
     text-transform:uppercase;
-    color:#333
+    /*color:#333*/
+	color: #e74c3c; 
+	font-weight:500;
 }
 .page-contact{
     width:100%;
@@ -1567,6 +1633,8 @@ section{
 }
 #footer{
     background-color:#222;
+	background-image: url("http://localhost/temp7/assets/img/footer.jpg");
+    background-repeat:  repeat-x;
     padding-top:60px;
     margin-top:60px;
     color:#ccc
@@ -1813,26 +1881,43 @@ section{
     font-size:11px;
     line-height:16px
 }
-h3 span{ 
-
-font-size: 24px;
+.title{ 
+font-size: 28px;
 color: #e74c3c;
 font-weight: 500;
+//padding-bottom:15px;
 }
-
-/*span::after {
-    position: absolute;
-    height: 2px;
-    background: #ff3d2e;
-    display: block;
-    content: '';
-    bottom: 0;
-    left: 0;
-    right: 0;
-}*/
-.border div{ 
-margin-bottom: 5px;
-padding-bottom: 5px;
+.title span{ 
+border-bottom:4px solid #e74c3c;
 
 }
-.summary{ text-align:left;}
+.border_div{ 
+margin-bottom: 15px;
+//padding-bottom: 0px;  
+border:1px solid #EAEAEA;
+box-shadow: 0px 0px 4px 0 rgba(221, 221, 221, 0.6); background-color:#FFFFFF;
+}
+.border_div .summary_border_div, .title_border_div , .more_border_div{ 
+padding-left: 5px; padding-right: 5px; 
+}
+.border_div_poem{ 
+margin-bottom: 15px;
+padding-bottom: 0px;  
+border:1px solid rgba(0, 0, 0, 0.1);
+text-align:center;
+background-color:#FFFFFF;
+}
+
+.border_div_poem .title_border_div_poem{ 
+margin-bottom: 10px;
+padding-bottom: 10px;  
+border-bottom:1px dotted #EAEAEA;
+text-align:center;
+}
+
+.border_div_poem h4{ 
+font-weight:700;
+}
+.border_div h4{ 
+font-weight:700;
+}

@@ -7,9 +7,11 @@ class Page_model extends CI_Model
     {
         $data = array(
             'title' => $this->input->post('title', true),
+			'title_hindi' => $this->input->post('title_hindi', true),
             'slug' => $this->input->post('slug', true),
             'page_description' => $this->input->post('page_description', true),
             'page_content' => $this->input->post('page_content', false),
+			'category_id' => $this->input->post('category_id', false),
             'page_order' => $this->input->post('page_order', true),
             'page_active' => $this->input->post('page_active', true),
             'title_active' => $this->input->post('title_active', true),
@@ -43,14 +45,16 @@ class Page_model extends CI_Model
         $id = $this->input->post('id', true);
         //set values
         $data = $this->page_model->input_values();
-
-        $update_data['page_description'] = $data['page_description'];
+		$update_data['page_description'] = $data['page_description'];
         $update_data['page_order'] = $data['page_order'];
+		$update_data['category_id'] = $data['category_id'];
+		$update_data["title_hindi"] = $data["title_hindi"];
 
         if (!is_null($data["title"])) {
             //slug for title
             $update_data["title"] = $data["title"];
             $update_data["slug"] = str_slug($data["title"]);
+			
         }
         if (!is_null($data["page_content"])) {
             $update_data["page_content"] = $data["page_content"];

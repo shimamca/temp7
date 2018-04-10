@@ -7,15 +7,23 @@
         <div class="row footer-widgets">
 
             <!-- footer widget about-->
-            <div class="col-sm-6 col-xs-12">
+            <div class="col-sm-4 col-xs-12">
                 <div class="footer-widget f-widget-about">
                     <div class="col-sm-12">
                         <div class="row">
-                            <h4 class="title"><?php echo html_escape($this->lang->line("footer_about")); ?></h4>
+                            <h4 class="title"><?php echo html_escape($this->lang->line("nav_contact")); ?></h4>
                             <div class="title-line"></div>
                             <p>
-                                <?php echo html_escape($settings->about_footer); ?>
+                                <i class="fa fa-map-marker" aria-hidden="true"></i> <?php echo html_escape($settings->contact_address); ?>
                             </p>
+							 <p>
+                                <i class="fa fa-envelope" aria-hidden="true"></i> <?php echo html_escape($settings->contact_email); ?>
+                            </p>
+							<p>
+                                <i class="fa fa-phone" aria-hidden="true"></i> <?php echo html_escape($settings->contact_phone); ?>
+                            </p>
+							
+							
                         </div>
                     </div>
                 </div>
@@ -23,14 +31,14 @@
 
 
             <!-- footer widget random posts-->
-           <!--  <div class="col-sm-4 col-xs-12">-->
+           <div class="col-sm-4 col-xs-12">
                 <!--Include footer random posts partial-->
-                <?php //$this->load->view('partials/_footer_random_posts'); ?>
-            <!--</div><!-- /.col-sm-4 -->
+                <?php $this->load->view('partials/_categories_footer'); ?> 
+           </div>
 
 
             <!-- footer widget follow us-->
-            <div class="col-sm-6 col-xs-12">
+            <div class="col-sm-4 col-xs-12">
                 <div class="footer-widget f-widget-follow">
                     <div class="col-sm-12">
                         <div class="row">
@@ -137,7 +145,9 @@
                     <div class="footer-bottom-left">
                         <p><?php echo html_escape($this->lang->line("footer_copyright")); ?></p>
                     </div>
-
+					<div class="footer-bottom-right">
+                        <p><div style="text-align:center;"><script type="text/javascript" src="http://services.webestools.com/cpt_visitors/54274-6-5.js"></script></div><a href="http://www.webestools.com/" style="display:block;text-align:center;" title="Tools services webmasters counters generators scripts tutorials free"></a></p>
+                    </div>
                     <div class="footer-bottom-right">
                         <ul class="nav-footer">
                             <?php foreach ($footer_pages as $page) : ?>

@@ -50,6 +50,7 @@ class MY_Controller extends CI_Controller
         //Send the data into the current view
         //http://ellislab.com/codeigniter/user-guide/libraries/loader.html
         $this->load->vars($global_data);
-
+		
+		
     }
 }

@@ -6,15 +6,15 @@
         <?php $this->load->view('partials/_popular_posts'); ?>
     </div>
 
-    <div class="sidebar-widget">
+     <!--<div class="sidebar-widget">-->
         <!--Include categories partial-->
-        <?php $this->load->view('partials/_categories'); ?>
-    </div>
+        <?php //$this->load->view('partials/_categories'); ?>
+     <!--</div>-->
 
-    <!--<div class="sidebar-widget">
-        <!--Include random slider partial
-        <?php //$this->load->view('partials/_random_slider'); ?>
-    </div>-->
+    <div class="sidebar-widget">
+        <!--Include random slider partial-->
+        <?php $this->load->view('partials/_random_slider'); ?>
+    </div>
 
     <div class="sidebar-widget">
         <!--Include tags partial-->

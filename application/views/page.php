@@ -11,7 +11,7 @@
                         <li class="breadcrumb-item">
                             <a href="<?php echo base_url(); ?>"><?php echo html_escape($this->lang->line("breadcrumb_home")); ?></a>
                         </li>
-                        <li class="breadcrumb-item active"><?php echo html_escape($page->title); ?></li>
+                        <li class="breadcrumb-item active"><?php echo html_escape($page->title_hindi); ?></li>
                     </ol>
                 </div>
             <?php else: ?>
@@ -46,13 +46,25 @@
                         <div class="content page-about page-res">
 
                             <?php if ($page->title_active == 1): ?>
-                                <h1 class="page-title"><?php echo html_escape($page->title); ?></h1>
+                                <h1 class="page-title"><?php echo html_escape($page->title_hindi); ?></h1>
+								
                             <?php endif; ?>
 
 
                             <!-- page content -->
                             <div class="text-style">
-                                <?php echo $page->page_content; ?>
+							
+                                <?php 
+								if(html_escape($page->category_id)){
+									$this->load->view('partials/_categories_post');
+								}
+								else if(html_escape($page->id) == 6){
+									$this->load->view('partials/_categories_page_poems');
+								}
+								else{
+									echo $page->page_content; 
+								}
+								 ?>
                             </div>
 
                         </div>

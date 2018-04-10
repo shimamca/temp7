@@ -1,9 +1,8 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
 <!--post list item-->
-
     <div>
-	     <?php  $arr__category_posts = (helper_get_category_posts($page->category_id));    ?>
+	     <?php  $arr__category_posts = (helper_get_category_poems($page->category_id));    ?>
                             
                           <?php   foreach ($arr__category_posts as $category_posts){
 									 
@@ -29,7 +28,14 @@
                 </h3>
               
             </div>
-            
+            <p class="label-post-category text-center">
+                    <a href="<?php echo base_url() . 'category/' . str_slug($category_posts->name) . '/' . $category_posts->category_id; ?>"
+                       class="a-slider-category">
+                        <label class="label label-danger cursor-pointer">
+                            <?php echo html_escape($category_posts->name); ?>
+                        </label>
+                    </a>
+                </p>
 
             <div class="post-buttons">
                 <!--Include social share links-->

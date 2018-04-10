@@ -35,11 +35,17 @@
                 <?php endif; ?>
 
                 <div class="form-group">
+                    <label>Page Hindi Title</label>
+                     <input type="text" class="form-control" name="title_hindi" placeholder="Page Hindi Title"
+                               value="<?php echo html_escape($page->title_hindi); ?>">
+                </div>
+				 <div class="form-group">
                     <label>Page Description (Meta Tag)</label>
                     <input type="text" class="form-control" name="page_description"
                            placeholder="Page Description"
                            value="<?php echo html_escape($page->page_description); ?>">
                 </div>
+				
 
                 <div class="form-group">
                     <label>Navigation Order</label>
@@ -47,6 +53,21 @@
                            value="<?php echo html_escape($page->page_order); ?>" min="1" max="999" required
                            style="width: 150px;">
                 </div>
+				 <div class="form-group">
+                    <label class="control-label">Category</label>
+                    <select name="category_id" class="form-control">
+                        <option value="">Select a category</option>
+                        <?php foreach ($categories as $item): ?>
+                            <?php if ($item->id == $page->category_id): ?>
+                                <option value="<?php echo html_escape($item->id); ?>"
+                                        selected><?php echo html_escape($item->name); ?></option>
+                            <?php else: ?>
+                                <option value="<?php echo html_escape($item->id); ?>"><?php echo html_escape($item->name); ?></option>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+				
 
                 <div class="form-group">
                     <div class="row">

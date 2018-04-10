@@ -191,6 +191,37 @@ class Post_model extends CI_Model
         return $query->result();
                
     }
+	//get category posts poem
+    public function get_category_posts_poem()
+    {
+		$limit =12;
+        $this->db->select('posts.*,categories.name');
+        $this->db->from('posts');
+        $this->db->join('categories', 'posts.category_id = categories.id'); 
+        $this->db->where_not_in('posts.category_id', array('1','10','11')); // not in catagory - home, article, events
+		$this->db->order_by('posts.id', 'DESC');
+		$this->db->limit($limit);
+        $query = $this->db->get();
+		
+        return $query->result();
+               
+    }
+	//get category poems all
+    public function get_category_poems()
+    {
+		
+        $this->db->select('posts.*,categories.name');
+        $this->db->from('posts');
+        $this->db->join('categories', 'posts.category_id = categories.id'); 
+        $this->db->where_not_in('posts.category_id', array('1','10','11')); // not in catagory - home, article, events
+		$this->db->order_by('posts.id', 'DESC');
+		//$this->db->limit($limit);
+        $query = $this->db->get();
+		
+        return $query->result();
+               
+    }
+	
     //get slider posts
     public function get_slider_posts()
     {
